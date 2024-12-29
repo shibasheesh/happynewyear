@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy New Year 2025</title>
+  <style>
+    /* General Body Styling */
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe4e6, #ffc9de);
+      font-family: 'Arial', sans-serif;
+      text-align: center;
+      color: #555;
+      overflow: hidden;
+    }
+
+    /* Entrance Animation */
+    .container {
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #d85a7f;
+      text-shadow: 2px 2px 5px rgba(255, 192, 203, 0.4);
+    }
+
+    button {
+      background-color: #ff9eb2;
+      color: white;
+      border: none;
+      padding: 15px 25px;
+      font-size: 1.2rem;
+      border-radius: 25px;
+      cursor: pointer;
+      transition: 0.3s;
+      box-shadow: 2px 2px 10px rgba(255, 100, 150, 0.4);
+    }
+
+    button:hover {
+      background-color: #ff7b96;
+      transform: scale(1.1);
+    }
+
+    /* Gift Card Styling */
+    .gift-card {
+      display: none;
+      width: 90%;
+      max-width: 600px;
+      background: #fff8f9;
+      color: #333;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+      text-align: left;
+      transform-origin: top center;
+      animation: unfoldCard 1.5s ease-out forwards, fadeInOpacity 1.5s ease-in-out forwards;
+      opacity: 0;
+    }
+
+    .gift-message {
+      font-size: 1.2rem;
+      line-height: 1.6;
+      color: #a8558d;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeInOpacity {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+
+    @keyframes unfoldCard {
+      0% {
+        transform: scaleY(0.1) scaleX(0.95);
+      }
+      50% {
+        transform: scaleY(1.05) scaleX(1.02);
+      }
+      100% {
+        transform: scaleY(1) scaleX(1);
+      }
+    }
+
+    @keyframes buttonToDisappear {
+      0% {
+        opacity: 1;
+        transform: scale(1);
+      }
+      100% {
+        opacity: 0;
+        transform: scale(0.8);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Happy New Year 2025 🎉</h1>
+    <button id="surpriseButton" onclick="showGiftCard()">Open Surprise 🎁</button>
+  </div>
+
+  <div class="gift-card" id="giftCard">
+    <div class="gift-message">
+      <p>
+        Hey Limi, Happy Wala New Year 🎊✨<br><br>
+        I'm always so lucky to have you in my life. You've been my constant cheerleader, partner-in-crime, and my biggest support, no matter what. 💖<br>
+        From all the gossips and laughs we shared to the moments that made this past year unforgettable, I’m grateful for every bit of it. 🥰<br><br>
+        Kyu na hun tumhare jaisi charming, cheering, and cutest bestie and soulmate mili hai mereko? 🤭❤<br><br>
+        All the moments we shared were so worth it, and they were all made special because of your presence in them. 🌟<br>
+        Cheers to more memories, more laughter, and a year ahead filled with even more happiness for both of us. 💕<br><br>
+        Always here for you, no matter what. 💖
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showGiftCard() {
+      const giftCard = document.getElementById('giftCard');
+      const button = document.getElementById('surpriseButton');
+
+      // Unfold and fade-in the card
+      giftCard.style.display = 'block';
+
+      // Remove the button with a fade-out animation
+      button.style.animation = 'buttonToDisappear 0.5s forwards';
+    }
+  </script>
+</body>
+</html>
